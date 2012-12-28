@@ -137,6 +137,8 @@
   , render: function (items) {
       var that = this
 
+      this.$element.attr('autocomplete', 'off')
+
       items = $(items).map(function (i, item) {
         i = $(that.options.item).attr('data-value', item)
         i.find('a').html(that.highlighter(item))
